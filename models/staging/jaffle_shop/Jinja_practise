@@ -1,0 +1,39 @@
+
+
+{%set my_cool_string = 'wow! cool'%}
+{%set my_second_cool_string = 'This is Jinga'%}
+{%set my_cool_number = 90%}
+
+
+{{my_cool_string}} {{my_second_cool_string}} I want to write jinja for {{my_cool_number}} years!
+
+
+
+{%set my_cool_animals=['leamur','panther','wolf','tardigate']%}
+{{my_cool_animals[0]}}
+
+{%for animal in my_cool_animals%}
+My favourite animal is the {{animal}}
+{%endfor%}
+
+
+{%set temperature = 45%}
+{%if temperature<65%}
+  Time for a capaccino
+{%else%}
+  Time for a cold brew
+{%endif%}
+
+
+{%-set foods= 'biryani','chicken','bell-peppers','paneer'-%}
+
+
+{%-for food in foods-%}
+    {%-if food =='biryani'-%}
+        {%set food_type='main-course'%}
+    {%-else-%}
+        {%set food_type='add-ons'%}
+    {%-endif-%}
+    The humble {{food}} is my favourite {{food_type}}
+{%endfor%}
+  
